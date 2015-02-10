@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAE Ajax Course - Level 01 - Exercise 02</title>
+    <style type="text/css">
+      body { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+
+    <script type="text/javascript">
+      
+      function get_identity() {
+		  var name = document.getElementById("name");
+		  var xhr = new XMLHttpRequest();
+		  var params = "whois=" + name.value;
+  		  xhr.open("POST", "exercise02.php");
+		  xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		  xhr.setRequestHeader("Content-Length", params.length);
+		  xhr.onreadystatechange = function() {
+			  if (xhr.readyState == 4 && xhr.status == 200) {
+				  var res = document.getElementById("response");
+				  res.innerHTML = xhr.responseText;
+			  }
+		  }
+		  xhr.send(params);
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h3>Who is that Superhero?</h3>
+    <p>
+     What is his secret identity?<br/>
+     <input type="text" id="name"/>
+     <input type="button" value="Tell me!" onclick="get_identity()"/>
+    </p>
+	<p>
+		<b><span id="response"></span></b>
+	</p>
+  </body>
+</html>
