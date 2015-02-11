@@ -20,7 +20,7 @@
     <header>
       <div class="inner">
         <h1>SAE Ajax</h1>
-        <h2>Level 01</h2>
+        <h2>Level 1 - Warm Up</h2>
         <a href="https://github.com/antoinet/sae.ajax" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
@@ -29,8 +29,26 @@
       <div class="inner clearfix">
         <section id="main-content">
 			
+
+          <h3><a id="exercise00" class="anchor" href="#exercise00" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 0 - Setup</h3>
+		  <p>
+			  Make sure you have a working development environment for the exercises. You will need the following:
+			  <ul>
+				  <li>Apache web server running with support for PHP (e.g. see <a href="http://www.mamp.info/de/">MAMP</a>)</li>
+				  <li>Text editor with syntax highlighting for html, javascript and php (e.g. <a href="http://www.sublimetext.com/">Sublime Text</a>, <a href="http://macromates.com/">Textmate</a> or <a href="http://www.barebones.com/products/textwrangler/">TextWrangler</a>)</li>
+				  <li>An up-to-date browser (Firefox, Chrome, Safari)</li>
+			  </ul>
+			  Now test your setup:
+			  <ol>
+				  <li>Locate your webserver's document root, i.e. the place on the filesystem from which the html and php documents will be served (e.g. /Applications/MAMP/htdocs)</li>
+				  <li>Download and unpack the exercises into the webserver's document root (<a href="https://github.com/antoinet/sae.ajax/zipball/master">zip</a> or <a href="https://github.com/antoinet/sae.ajax/tarball/master">tar.gz</a>)</li>
+				  <li>Open up <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/html_template.html">html_template.html</a> in your browser, i.e. by navigating to <a href="http://localhost/sae.ajax/html_template.html">http://localhost/sae.ajax/html_template.html</a>.</li>
+				  <li><em>Note 1</em>: the actual URL may differ depending on your installation</li>
+				  <li><em>Note 2</em>: you should not open the files directly from the filesystem, i.e. <strike><a href="file:///Applications/MAMP/htdocs/sae.ajax/html_template.html">file:///Applications/MAMP/htdocs/sae.ajax/html_template.html</a></strike>
+			  </ol>
+		  </p>
 			
-          <h3><a id="exercise01" class="anchor" href="#exercise01" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 1</h3>
+          <h3><a id="exercise01" class="anchor" href="#exercise01" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 1 - Using the Developer Console to Debug Javascript</h3>
 		  
           <p>
 			  Something's wrong with this html file, have a look at it: <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level01/exercise01.html">level01/exercise01.html</a>
@@ -38,15 +56,18 @@
 		  <p>
 			  Find the bug in the javascript code and fix it. Proceed as follows:
 			  <ol>
-				  <li>Open your browser's development console (see here for <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">Firefox</a>, <a href="https://developer.chrome.com/devtools/docs/console">Chrome</a> or <a href="https://developer.apple.com/safari/tools/">Safari</a>),<br/> or better: install the <a href="http://getfirebug.com/">Firebug Plugin</a></li>
-				  <li>Interpret the errors messages in the console.</li>
-				  <li>Fix the code!</li>
+				  <li>Open the file from your webserver's document root</li>
+				  <li>Test the application, something's not working...</li>
+				  <li>Open your browser's development console (see here for <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">Firefox</a>, <a href="https://developer.chrome.com/devtools/docs/console">Chrome</a> or <a href="https://developer.apple.com/safari/tools/">Safari</a>)</li>
+				  <li>Alternative: install the <a href="http://getfirebug.com/">Firebug Plugin</a> and open it</li>
+				  <li>Interpret the errors messages in the console</li>
+				  <li>Figure out what's wrong and fix the code!</li>
 			  </ol>
 		  </p>
 			  
 
-          <h3><a id="exercise02" class="anchor" href="#exercise02" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 2</h3>			  
-		  <p> Copy the following files into your webserver's document root:
+          <h3><a id="exercise02" class="anchor" href="#exercise02" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 2 - Analyzing Simple AJAX Requests with the Developer Console</h3>			  
+		  <p>Have a look at the following files from your webserver's document root:
 			  <ul>
 				  <li><a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level01/exercise02.php">level01/exercise02.php</a></li>
 				  <li><a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level01/exercise02.html">level01/exercise02.html</a></li>
@@ -61,6 +82,19 @@
 				  <li>How does the server format the response? (hint: look at the <em>Content-Type</em> header)</li>
 		  </p>
 
+
+          <h3><a id="exercise03" class="anchor" href="#exercise03" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 3 - Analyzing Real World AJAX</h3>	
+		  <p>
+			 <ol>
+				 <li>Open your browser and navigate to <a href="https://www.google.ch/">Google</a></li>
+				 <li>Open the development console under the <em>Network</em> tab</li>
+				 <li>Type in some characters into the Google search bar and watch how suggestions appear</li>
+				 <li>Analyse the AJAX requests in the console</li>
+				 <li>What kind of requests are sent by the browser?</li>
+				 <li>In which parameter are the characters transmitted from the browser to Google?</li>
+				 <li>How are the suggestions transmitted back from Google to the browser?</li>
+			 </ol>
+		  </p>
 
         </section>
 
@@ -77,10 +111,12 @@
 
           <p class="repo-owner"><a href="https://github.com/antoinet/sae.ajax"></a> is maintained by <a href="https://github.com/antoinet">antoinet</a>.</p>
 		  
-		  <h3>Level 1</h3>
+		  <h3>Level 1 - Warm Up</h3>
 		  <ul>
+			  <li><a href="level01.html#exercise00">Exercise 0</a></li>
 			  <li><a href="level01.html#exercise01">Exercise 1</a></li>
   			  <li><a href="level01.html#exercise02">Exercise 2</a></li>
+			  <li><a href="level01.html#exercise03">Exercise 3</a></li>
 		  </ul>
 
           <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
