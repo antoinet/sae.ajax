@@ -42,9 +42,10 @@
 			  <ol>
 				  <li>Locate your webserver's document root, i.e. the place on the filesystem from which the html and php documents will be served (e.g. /Applications/MAMP/htdocs)</li>
 				  <li>Download and unpack the exercises into the webserver's document root (<a href="https://github.com/antoinet/sae.ajax/zipball/master">zip</a> or <a href="https://github.com/antoinet/sae.ajax/tarball/master">tar.gz</a>)</li>
-				  <li>Open up <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/html_template.html">html_template.html</a> in your browser, i.e. by navigating to <a href="http://localhost/sae.ajax/html_template.html">http://localhost/sae.ajax/html_template.html</a>.</li>
+				  <li>Open up <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/test.php">test.php</a> in your browser, i.e. by navigating to <a href="http://localhost/sae.ajax/test.php">http://localhost/sae.ajax/test.php</a>.</li>
 				  <li><em>Note 1</em>: the actual URL may differ depending on your installation</li>
-				  <li><em>Note 2</em>: you should not open the files directly from the filesystem, i.e. <strike><a href="file:///Applications/MAMP/htdocs/sae.ajax/html_template.html">file:///Applications/MAMP/htdocs/sae.ajax/html_template.html</a></strike>
+				  <li><em>Note 2</em>: you should not open the file directly from the filesystem, i.e. <strike><a href="file:///Applications/MAMP/htdocs/sae.ajax/html_template.html">file:///Applications/MAMP/htdocs/sae.ajax/test.php</a></strike></li>
+				  <li>You should see a page containing only one line, e.g.: <b>hello, world! running PHP 5.5.14</b></li>
 			  </ol>
 		  </p>
 			
@@ -56,7 +57,7 @@
 		  <p>
 			  Find the bug in the javascript code and fix it. Proceed as follows:
 			  <ol>
-				  <li>Open the file from your webserver's document root</li>
+				  <li>Open the file from your webserver</li>
 				  <li>Test the application, something's not working...</li>
 				  <li>Open your browser's development console (see here for <a href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">Firefox</a>, <a href="https://developer.chrome.com/devtools/docs/console">Chrome</a> or <a href="https://developer.apple.com/safari/tools/">Safari</a>)</li>
 				  <li>Alternative: install the <a href="http://getfirebug.com/">Firebug Plugin</a> and open it</li>
@@ -65,9 +66,19 @@
 			  </ol>
 		  </p>
 			  
+			  
+          <h3><a id="exercise02" class="anchor" href="#exercise02" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 2 - Code a Small Javascript Game</h3>			  
+		  <p>Write a JavaScript program where the program takes a random integer between 1 to 10, the user is then prompted to input a guess number. If the user input matches with guess number, the program will display a message "Good Work" otherwise display a message "Not matched".
+		  <ul>
+			  <li>Don't start from scratch, use <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/html_template.html">html_template.html</a> as a start</li>
+			  <li>You can use the expression <code>Math.ceil(Math.random() * 10)</code> to generate a random number in the range 1-10</li>
+			  <li>Use <code>prompt()</code> to get input from the user and <code>alert()</code> to output messages.</li>
+			  <li>Pay good attention to messages in the developer console while testing your code</li>
+		  </ul>
+		  </p>
 
-          <h3><a id="exercise02" class="anchor" href="#exercise02" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 2 - Analyzing Simple AJAX Requests with the Developer Console</h3>			  
-		  <p>Have a look at the following files from your webserver's document root:
+          <h3><a id="exercise03" class="anchor" href="#exercise03" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 3 - Analyzing Simple AJAX Requests with the Developer Console</h3>			  
+		  <p>Have a look at the following files from your webserver:
 			  <ul>
 				  <li><a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level01/exercise02.php">level01/exercise02.php</a></li>
 				  <li><a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level01/exercise02.html">level01/exercise02.html</a></li>
@@ -79,11 +90,11 @@
 				  <li>Open your browser's console, switch to the <em>Network</em> tab and analyse what happens when you click on the button.</li>
 				  <li>What kind of requests are sent by the browser?
 				  <li>Which parameter is used to query a superhero's identity?</li>
-				  <li>How does the server format the response? (hint: look at the <em>Content-Type</em> header)</li>
+				  <li>How does the server format the response? (hint: look at the <code>Content-Type</code> header)</li>
 		  </p>
 
 
-          <h3><a id="exercise03" class="anchor" href="#exercise03" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 3 - Analyzing Real World AJAX</h3>	
+          <h3><a id="exercise04" class="anchor" href="#exercise04" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 4 - Analyzing Real World AJAX</h3>	
 		  <p>
 			 <ol>
 				 <li>Open your browser and navigate to <a href="https://www.google.ch/">Google</a></li>
@@ -117,6 +128,7 @@
 			  <li><a href="level01.html#exercise01">Exercise 1</a></li>
   			  <li><a href="level01.html#exercise02">Exercise 2</a></li>
 			  <li><a href="level01.html#exercise03">Exercise 3</a></li>
+			  <li><a href="level01.html#exercise04">Exercise 4</a></li>
 		  </ul>
 
           <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
