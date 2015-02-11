@@ -13,14 +13,14 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>SAE Ajax Course</title>
+    <title>SAE Ajax Course - Level 2</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
         <h1>SAE Ajax</h1>
-        <h2>Welcome</h2>
+        <h2>Level 2 - Working with DOM</h2>
         <a href="https://github.com/antoinet/sae.ajax" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
@@ -28,24 +28,20 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3><a id="welcome-to-sae-ajax-course" class="anchor" href="#welcome-to-sae-ajax-course" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the SAE Ajax Course.</h3>
+			
 
-
-<pre><code>xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-	if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) {
-		alert("AJAX!");
-	}
-}
-xhr.open("GET", "/ajax.php");
-xhr.send();</code></pre>
-
-
-          <h3><a id="exercises" class="anchor" href="#exercises" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercises</h3>
-Download all exercises using the button on the right.
-<ul>
-	<li><a href="level01.html">Level 1 - Warm Up</a></li>
-</ul>
+          <h3><a id="exercise00" class="anchor" href="#exercise00" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 0 - getDocumentById()</h3>
+		  <p>
+			  This exercise requires you to write a small javascript function that will modify the text on <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level02/exercise00.html">level02/exercise00.html</a>
+			  
+			  <ol>
+				  <li>Locate the HTML element you want to change and note its id</li>
+				  <li>In the javascript function, define a variable <code>saying</code> to hold the element</li>
+				  <li>Retrieve the DOM element <code>document.getElementById(...)</code> and assign it to <code>saying</code></li>
+				  <li>Change the value of the element by using <code>saying.innerHTML = ...</code>, choose any text you like</li>
+			  </ol>
+			  Hint: don't forget to register an event to trigger the function!
+		  </p>
 
         </section>
 
