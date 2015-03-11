@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAE Ajax Course - Level 1 - Exercise 1</title>
+    <style type="text/css">
+      body { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+
+    <script type="text/javascript">
+      
+      function greet() {
+		var name = document.getElementById("name").value;
+		console.log("name is " + name);
+        // what is this?! remove it:
+		// blip
+        alert("hello, " + name + "!");
+      }
+    </script>
+
+  </head>
+  <body>
+
+    <h3>What's wrong?</h3>
+    <p>
+     What's your name?<br/>
+     <input type="text" id="name"/>
+     <input type="button" value="Greet!" onclick="greet()"/>
+    </p>
+  </body>
+</html>
