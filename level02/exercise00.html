@@ -11,7 +11,8 @@
     <script type="text/javascript">
 	
 		function changeText() {
-			// fill your code here
+            header = document.getElementById("saying");
+            header.innerHTML = "YOLO, Emil for Bundesratspräsident!!!111eleven";
 		}
 	
     </script>
@@ -20,7 +21,7 @@
   <body>
 
     <h3>Make things change!</h3>
-	<input type="button" value="Do it!"/>
+	<input type="button" value="Do it!" onclick="changeText()"/>
 	<h1 style="color: red" id="saying">The only thing constant in life is change</h1>
   </body>
 </html>

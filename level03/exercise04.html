@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAE Ajax Course - Level 3 - Exercise 4</title>
+    <style type="text/css">
+      body { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+
+    <script type="text/javascript">
+        function send_ajax_request() {
+            
+            xhr = new XMLHttpRequest();
+            
+            xhr.onreadystatechange = function() {
+                // INSERT YOUR CODE HERE    
+            }
+            
+            xhr.open("GET", "exercise03.php");
+            xhr.send();
+        }
+    </script>
+
+  </head>
+  <body>
+    <input type="button" onclick="send_ajax_request()" value="AJAX">
+    
+      <div id="loading"></div>              
+      
+  </body>
+</html>

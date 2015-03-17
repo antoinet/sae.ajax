@@ -22,7 +22,15 @@
     <div class="square" style="background-color: blue"></div>
 
     <script type="text/javascript">
-     // javascript goes here
+     var colors = ["red", "green", "blue", "yellow", "pink", "black"];
+         
+     for (i = 0; i < 100; i++) {
+        var square = document.createElement("div");
+        square.className = "square";
+        square.style.backgroundColor = colors[i % colors.length];
+        
+        document.body.appendChild(square);
+     }
     </script>
 
   </body>

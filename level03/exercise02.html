@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAE Ajax Course - Level 3 - Exercise 2</title>
+    <style type="text/css">
+      body { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+
+    <script type="text/javascript">
+        function send_ajax_request() {
+            
+            // create a new XMLHttpRequest instance
+            xhr = new XMLHttpRequest();
+            
+            // define the AJAX callback
+            xhr.onreadystatechange = function() {
+                
+                if (xhr.readyState == 4) {
+                    // YOUR CODE HERE
+                }
+                
+            }
+            
+            // set the method and URL to which to connect to
+            xhr.open("GET", "exercise02.php");
+            
+            // execute the request
+            xhr.send();
+        }
+    </script>
+
+  </head>
+  <body>
+    <input type="button" onclick="send_ajax_request()" value="AJAX">
+    <h3>AJAX Status: <span id="http_status"></span></h3>
+      
+  </body>
+</html>

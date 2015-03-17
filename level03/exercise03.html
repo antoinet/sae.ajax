@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAE Ajax Course - Level 3 - Exercise 3</title>
+    <style type="text/css">
+      body { font-family: Arial, Helvetica, sans-serif; }
+      .readystate {
+          display: inline;
+          font-size: 1.2em; 
+          background-color: azure;
+          border: 1px solid gray;
+          margin: 10px;
+          padding: 2px;
+          text-align: center;
+      }
+    </style>
+
+    <script type="text/javascript">
+        function send_ajax_request() {
+            
+            xhr = new XMLHttpRequest();
+            
+            xhr.onreadystatechange = function() {
+                // INSERT YOUR CODE HERE    
+            }
+            
+            xhr.open("GET", "exercise03.php");
+            xhr.send();
+        }
+    </script>
+
+  </head>
+  <body>
+    <input type="button" onclick="send_ajax_request()" value="AJAX">
+    
+      <div id="readystatelist">
+        <div class="readystate">Example readystates</div>
+        <div class="readystate">delete these</div>
+        <div class="readystate">when clicking</div>
+        <div class="readystate">on the AJAX</div>
+        <div class="readystate">button</div>
+      </div>              
+      
+  </body>
+</html>
