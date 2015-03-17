@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>SAE Ajax Course - Level 3</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>SAE Ajax</h1>
+        <h2>Level 3 - The XMLHttpRequest Object</h2>
+        <a href="https://github.com/antoinet/sae.ajax" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+			
+
+          <h3><a id="exercise00" class="anchor" href="#exercise00" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 0 - Inspecting the XMLHttpRequest Object</h3>
+		  <p>
+			  Let's have a closer look at the XMLHttpRequest object:
+			  <ol>
+				  <li>Open your browser's web development toolbar (e.g. Firebug) with the javascript console.</li>
+				  <li>Create a new instance of XMLHttpRequest by typing: <code>var xhr = new XMLHttpRequest()</code></li>
+				  <li>Click on the resulting element, this will automatically switch to the DOM tab.</li>
+				  <li>Identify the different members of the object: which elements are fields? Which are methods (i.e. functions)? And which are constants?</li>
+			  </ol>
+		  </p>
+
+
+          <h3><a id="exercise01" class="anchor" href="#exercise01" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 1 - Hello, AJAX</h3>
+		  
+          <p>This exercise is the "Hello, World" of AJAX, in which you will code your very first AJAX request. Copy  <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise01.html">level03/exercise01.html</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise01.php">level03/exercise01.php</a> to your web root directory and write your code in the html file.
+		  </p>
+		  <p>
+              <ol>
+                  <li>Create a new XMLHttpRequest object.</li>
+                  <li>Define the AJAX callback function, that will be called each time the XMLHttpRequest changes its internal state.</li>
+                  <li>Set the HTTP method and URL to call.</li>
+                  <li>Execute the AJAX request.</li>
+              </ol>
+		  </p>
+        <p>
+            <ul>
+                <li>Use the network tab of the web developer toolbar to debug your code. If everything is fine, you should see the requests everytime you click on the AJAX button.</li>
+                <li>How many times does the alert pop up? Why?</li>
+            </ul>
+        </p>
+          
+			
+          <h3><a id="exercise02" class="anchor" href="#exercise02" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 2 - HTTP Status Codes</h3>
+		  
+          <p>In this exercise, you will retrieve the HTTP status code, which indicates the result of the server processing the AJAX request. First, copy <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise02.html">level03/exercise02.html</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise02.php">level03/exercise02.php</a> to your web root directory.
+		  </p>
+		  <p>
+              <ol>
+                  <li>Open your browser's web developer toolbar (e.g. Firebug) with the network tab.</li>
+                  <li>Open the html file and click on the AJAX button several times, look at the results in the network tab.</li>
+                  <li>Locate the position in the javascript code where the AJAX call is processed. Insert code that will print the HTTP status code and HTTP status text in the span element with id <code>http_status</code>. Use the corresponding fields of the <code>XMLHttpRequest</code> object <code>status</code> and <code>statusText</code>.</li>
+              </ol>
+		  </p>
+    <p>
+        <ul>
+            <li>Which HTTP status codes do you know of?</li>
+            <li>Which is by far the most popular one?</li>
+            <li>What is HTTP status code 418?</li>
+        </ul>
+    </p>
+			  
+			  
+          <h3><a id="exercise03" class="anchor" href="#exercise03" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 3 - XMLHttpRequest ReadyState</h3>			  
+<p>As seen earlier, the callback function defined in <code>onreadystatechange</code> gets called multiple times during each AJAX request. In this exercise, write code that displays the current <code>readyState</code> each time the function is called. Copy the files <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise03.html">level03/exercise03.html</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise03.php">level03/exercise03.php</a> to your web root and edit the HTML file.
+              <ol>
+                  <li>First, when clicking on the AJAX button, delete all div elements with class <code>readystate</code>.</li>
+                  <li>Each time the AJAX callback function is called, append a new element to the div with id <code>readystatelist</code> with the value of the XMLHttpRequest's <code>readyState</code> field. (Bonus points: in addition to the numeric value of <code>readyState</code>, print its corresponding state name, i.e. UNSENT, OPENED, HEADERS_RECEIVED, LOADING and DONE).</li>
+              </ol>
+		  </p>
+
+          <h3><a id="exercise04" class="anchor" href="#exercise04" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 4 - Displaying a Throbber</h3>			  
+		  <p>A throbber is an animated graphic that visualizes that the application is performing an action in the background. For example, the website is loading data from the server, which may take a while. This is a very common pattern in connection with AJAX and a necessity for good user-experience.</p><p>In this exercise, you will implement a simple AJAX call, during processing time, a throbber is displayed. After the request has finished, remove the throbber and replace it with the string "done". Copy the files <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise04.html">level03/exercise04.html</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise04.php">level03/exercise04.php</a> to your web root and edit the HTML file.</p><p>Hint: You can generate nice throbbers from <a href="http://www.ajaxload.info/">ajaxload.info</a>.</p>
+
+
+          <h3><a id="exercise05" class="anchor" href="#exercise05" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 4 - Processing Server Text Responses</h3>	
+		  <p>
+		  </p>
+
+
+
+          <h3><a id="exercise06" class="anchor" href="#exercise06" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 4 - Processing Server XML Responses</h3>	
+		  <p>
+		  </p>
+
+
+
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/antoinet/sae.ajax/raw/gh-pages/SAE_AJAX.ppt" class="button">
+            <small>Download Slides</small>  
+            .ppt file
+          </a>
+          <a href="https://github.com/antoinet/sae.ajax/zipball/master" class="button">
+            <small>Download Exercises</small>
+            .zip file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/antoinet/sae.ajax"></a> is maintained by <a href="https://github.com/antoinet">antoinet</a>.</p>
+		  
+		  <h3>Level 1 - Warm Up</h3>
+		  <ul>
+			  <li><a href="level01.html#exercise00">Exercise 0</a></li>
+			  <li><a href="level01.html#exercise01">Exercise 1</a></li>
+  			  <li><a href="level01.html#exercise02">Exercise 2</a></li>
+			  <li><a href="level01.html#exercise03">Exercise 3</a></li>
+			  <li><a href="level01.html#exercise04">Exercise 4</a></li>  
+		  </ul>
+		  <h3>Level 2 - Working with DOM</h3>
+		  <ul>
+			  <li><a href="level02.html#exercise00">Exercise 0</a></li>
+              <li><a href="level02.html#exercise01">Exercise 1</a></li>
+              <li><a href="level02.html#exercise02">Exercise 2</a></li>
+		  </ul>
+		  <h3>Level 3 - The XMLHttpRequest Object</h3>
+		  <ul>
+			  <li><a href="level03.html#exercise00">Exercise 0</a></li>
+              <!--li><a href="level03.html#exercise01">Exercise 1</a></li-->
+              <!--li><a href="level03.html#exercise02">Exercise 2</a></li-->
+		  </ul>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
