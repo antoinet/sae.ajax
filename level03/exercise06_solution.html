@@ -19,8 +19,8 @@
                     var html = "<table><tr><th>Artist</th>" +
                         "<th>Title</th><th>Year</th></tr>";
                     
-                    xml = xhr.responseXML;
-                    cds = xml.getElementsByTagName("CD");
+                    var xml = xhr.responseXML;
+                    var cds = xml.getElementsByTagName("CD");
                     for (i = 0; i < cds.length; i++) {
                         var artist = cds[i].getElementsByTagName("ARTIST")[0].firstChild.nodeValue;
                         var title = cds[i].getElementsByTagName("TITLE")[0].firstChild.nodeValue;
