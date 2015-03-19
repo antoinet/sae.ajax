@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAE Ajax Course - Level 3 - Exercise 6</title>
+    <style type="text/css">
+      body { font-family: Arial, Helvetica, sans-serif; }
+      table { border-collapse: collapse; border: 1px solid black; }
+    </style>
+
+    <script type="text/javascript">
+        function send_ajax_request() {
+            
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    
+                    var content = document.getElementById("content");
+                    content.innerHTML = "<table><tr><th><td>Artist</td>" +
+                        "<td>Title</td><td>Year</td></tr>";
+                    
+                    xml = xhr.responseXML;
+                    cds = xml.getElementsByTagName("CD");
+                    for (i = 0; i < cds.length; i++) {
+                        var artist = cds[i].getElementsByTagName("ARTIST")[0].value;
+                        var title = cds[i].getElementsByTagName("TITLE")[0].nodeValue;
+                        var year = cds[i].getElementsByTagName("YEAR")[0];
+                        
+                        var row = "<tr><td>" + artist + "</td><td>" + title + 
+                            "</td><td>" + year + "</td></tr>";
+                        content.innerHTML += row;
+                    }
+                    
+                    content.innerHTML += "</table>";
+                }
+            }
+            xhr.open("GET", "exercise06.php");
+            xhr.send();
+        }
+    </script>
+
+  </head>
+  <body>
+    <input type="button" onclick="send_ajax_request()" value="AJAX">
+    <div id="content"></div>
+  </body>
+</html>

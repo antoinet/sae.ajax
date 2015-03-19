@@ -19,28 +19,23 @@
     <script type="text/javascript">
         function send_ajax_request() {
             
-            list = document.getElementById("readystatelist");
-            list.innerHTML = "";
+            var div = document.getElementById("readystatelist");
+            div.innerHTML = "";
             
             xhr = new XMLHttpRequest();
             
-            xhr.onreadystatechange = function() {    
-                switch (xhr.readyState) {
-                        case 0: state = "UNSENT"; break;
-                        case 1: state = "OPENED"; break;
-                        case 2: state = "HEADERS_RECEIVED"; break;
-                        case 3: state = "LOADING"; break;
-                        case 4: state = "DONE"; break;
-                        default: state = "unknown";
-                }
-                var div = document.createElement("div");
-                div.className = "readystate";
-                div.innerHTML = state;
-                list.appendChild(div);
+            xhr.onreadystatechange = function() {
+                var names = ["UNSENT", "OPENED", "HEADERS_RECEIVED", "LOADING", "DONE"];
+                
+                var innerdiv = document.createElement("div");
+                innerdiv.className = "readystate";
+                innerdiv.innerHTML = names[xhr.readyState];
+                div.appendChild(innerdiv);
             }
             
             xhr.open("GET", "exercise03.php");
             xhr.send();
+
         }
     </script>
 
