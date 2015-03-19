@@ -107,7 +107,15 @@
 
 
           <h3><a id="exercise06" class="anchor" href="#exercise06" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 6 - Processing Server XML Responses</h3>	
-		  <p>
+		  <p>In this exercise, you will receive an XML structure from the server containing data about music albums. The goal is to retrieve the data and display it as a HTML table on the page.
+            <ol>
+                <li>First, download <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise06.html">level03/exercise06.html</a>, <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise06.php">level03/exercise06.php</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise06.xml">level03/exercise06.xml</a> and copy those files to your web root directory.</li>
+                <li>Have a look at the XML data returned by the server (the PHP file) and analyse the data structure.</li>
+                <li>Retrieve the XML data using <code>xhr.responseXML</code> and store it into a variable. The result is not a string, it is an XML-DOM structure.</li>
+                <li>The nodes in the XML-DOM tree are accessible in a similar way than HTML DOM. You can use methods such as <code>getElementsByTagName()</code> (returns an array), <code>firstChild()</code>, <code>nodeValue</code>, etc.</li>
+                <li>Create a table with 3 columns. The rows should contain the artist's name, the album name and the release year for each CD.</li>
+            </ol>
+            Hint: you don't have to create each table element manually using <code>document.createElement()</code>, instead, you can use <code>innerHTML</code>.
 		  </p>
 
 
