@@ -5,7 +5,7 @@
     <title>SAE Ajax Course - Level 3 - Exercise 6</title>
     <style type="text/css">
       body { font-family: Arial, Helvetica, sans-serif; }
-      table { border-collapse: collapse; border: 1px solid black; }
+      table,tr,td,th { border-collapse: collapse; border: 1px solid black; }
     </style>
 
     <script type="text/javascript">
@@ -16,22 +16,23 @@
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     
                     var content = document.getElementById("content");
-                    content.innerHTML = "<table><tr><th><td>Artist</td>" +
-                        "<td>Title</td><td>Year</td></tr>";
+                    var html = "<table><tr><th>Artist</th>" +
+                        "<th>Title</th><th>Year</th></tr>";
                     
                     xml = xhr.responseXML;
                     cds = xml.getElementsByTagName("CD");
                     for (i = 0; i < cds.length; i++) {
-                        var artist = cds[i].getElementsByTagName("ARTIST")[0].value;
-                        var title = cds[i].getElementsByTagName("TITLE")[0].nodeValue;
-                        var year = cds[i].getElementsByTagName("YEAR")[0];
+                        var artist = cds[i].getElementsByTagName("ARTIST")[0].firstChild.nodeValue;
+                        var title = cds[i].getElementsByTagName("TITLE")[0].firstChild.nodeValue;
+                        var year = cds[i].getElementsByTagName("YEAR")[0].firstChild.nodeValue;
                         
                         var row = "<tr><td>" + artist + "</td><td>" + title + 
                             "</td><td>" + year + "</td></tr>";
-                        content.innerHTML += row;
+                        html += row;
                     }
                     
-                    content.innerHTML += "</table>";
+                    html += "</table>";
+                    content.innerHTML = html;
                 }
             }
             xhr.open("GET", "exercise06.php");
