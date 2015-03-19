@@ -35,7 +35,7 @@
 			  Let's have a closer look at the XMLHttpRequest object:
 			  <ol>
 				  <li>Open your browser's web development toolbar (e.g. Firebug) with the javascript console.</li>
-				  <li>Create a new instance of XMLHttpRequest by typing: <code>var xhr = new XMLHttpRequest()</code></li>
+				  <li>Create a new instance of XMLHttpRequest by typing: <code>xhr = new XMLHttpRequest()</code></li>
 				  <li>Click on the resulting element, this will automatically switch to the DOM tab.</li>
 				  <li>Identify the different members of the object: which elements are fields? Which are methods (i.e. functions)? And which are constants?</li>
 			  </ol>
@@ -49,7 +49,7 @@
 		  <p>
               <ol>
                   <li>Create a new XMLHttpRequest object.</li>
-                  <li>Define the AJAX callback function, that will be called each time the XMLHttpRequest changes its internal state.</li>
+                  <li>Define the AJAX callback function, that will be called each time the XMLHttpRequest changes its internal state. Execute an <code>alert()</code> within the function.</li>
                   <li>Set the HTTP method and URL to call.</li>
                   <li>Execute the AJAX request.</li>
               </ol>
@@ -94,13 +94,19 @@
 		  <p>A throbber is an animated graphic that visualizes that the application is performing an action in the background. For example, the website is loading data from the server, which may take a while. This is a very common pattern in connection with AJAX and a necessity for good user-experience.</p><p>In this exercise, you will implement a simple AJAX call, during processing time, a throbber is displayed. After the request has finished, remove the throbber and replace it with the string "done". Copy the files <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise04.html">level03/exercise04.html</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise04.php">level03/exercise04.php</a> to your web root and edit the HTML file.</p><p>Hint: You can generate nice throbbers from <a href="http://www.ajaxload.info/">ajaxload.info</a>.</p>
 
 
-          <h3><a id="exercise05" class="anchor" href="#exercise05" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 4 - Processing Server Text Responses</h3>	
-		  <p>
+          <h3><a id="exercise05" class="anchor" href="#exercise05" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 5 - Processing Server Text Responses</h3>	
+<p>In this exercise, you will issue an AJAX request and retrieve the server response, which you will display on the page. The template files <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise05.html">level03/exercise05.html</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise05.php">exercise05.php</a> contain a javascript function that is called when the user scrolls down to the end of the page. The goal of the exercise is to load additional content from the server when this occurs.
+    <ol>
+        <li>Locate the spot in the HTML file that you'll have to fill in with your code.</li>
+        <li>Create a new XMLHttpRequest object and initialize it appropriately (think of the four necessary steps). The target URL is <code>exercise05.php</code>.</li>
+        <li>Retrieve the data returned by the server in the AJAX response with the field <code>xhr.responseText</code>.</li>
+        <li>Each time, append the new data to the div with id "wrap".</li>
+    </ol>
 		  </p>
 
 
 
-          <h3><a id="exercise06" class="anchor" href="#exercise06" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 4 - Processing Server XML Responses</h3>	
+          <h3><a id="exercise06" class="anchor" href="#exercise06" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 6 - Processing Server XML Responses</h3>	
 		  <p>
 		  </p>
 
