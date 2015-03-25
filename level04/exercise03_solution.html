@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAE Ajax Course - Level 4 - Exercise 3</title>
+    <style type="text/css">
+      body { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+
+    <script type="text/javascript">
+        
+        function create_script_tag() {
+            url = "https://api.flickr.com/services/rest/?method=flickr.tags.getClusterPhotos&api_key=286a91389f0175f572466c707ba85df9&tag=zurich&format=json&jsoncallback=jsonpcallback";
+            script = document.createElement("script");
+            script.src = url;
+            document.body.appendChild(script);
+        }
+        
+        function jsonpcallback(jsondata) {
+            var photos = jsondata.photos.photo;
+            for (i = 0; i < photos.length; i++) {
+                li = document.createElement("li");
+                li.innerHTML = photos[i].title;
+                document.getElementById("photo_titles").appendChild(li);
+            }
+        }
+        
+    </script>
+
+  </head>
+  <body>
+    <input type="button" onclick="create_script_tag()" value="Display data"><br/>
+      <ul id="photo_titles"></ul>
+  </body>
+</html>
