@@ -120,10 +120,11 @@
 
 
           <h3><a id="exercise07" class="anchor" href="#exercise07" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 7 - Processing Server JSON Responses</h3>	
-<p>
+<p>In this exercise, you will process JSON data originating from the social media platform <i>flickr</i>. The PHP code will provide you with the result of the <code>flickr.photos.getRecent</code> API call, which returns a set of most recent photos uploaded on flickr. The goal is parse the JSON data, extract the photo urls and create corresponding <code>&lt;img&gt;</code> tags to display all photos. Download the following files: <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise07.html">level03/exercise07.html</a>, <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise07.php">level03/exercise07.php</a>.
     <ul>
-        <li><a href="https://www.flickr.com/services/api/flickr.photos.getRecent.html">Flickr API flickr.photos.getRecent</a></li>
-        <li><a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise07.html">level03/exercise07.html</a>, <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level03/exercise07.php">level03/exercise07.php</a></li>
+        <li>First, have a look at the description of the <a href="https://www.flickr.com/services/api/flickr.photos.getRecent.html">Flickr API flickr.photos.getRecent</a> API call on flickr.</li>
+        <li>To analyse the returned JSON structure, look at the result of the API by calling the PHP file in your browser. You may want to use an Addon like <a href="http://jsonview.com">JSONView</a> for this task.</li>
+        <li>Within the AJAX callback in the HTML file, write code to read in the JSON structure. The response body from the server can be retrieved from <code>xhr.responseText</code>. To convert this string value to a JSON structure, use <code>JSON.parse(...)</code>.</li>
     </ul>
 </p>
 
