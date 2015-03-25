@@ -1,6 +1,6 @@
 <?php
     $json = <<< EOD
-jsonpcallback(
+jsoncallback(
 {
  "firstName": "John",
  "lastName": "Smith",
