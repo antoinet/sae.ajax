@@ -71,7 +71,7 @@
               
             <ol>
                 <li>Have a look at the API specification for the corresponding method <a href="https://www.flickr.com/services/api/flickr.tags.getClusterPhotos.html">flickr.tags.getClusterPhotos</a>. Also, play around with the <a href="https://www.flickr.com/services/api/explore/flickr.tags.getClusterPhotos">API Explorer</a> to see how the response data is formatted (choose output: JSONP).</li>
-                <li>Build the URL using the following format: (for details, see <a href="https://www.flickr.com/services/api/request.rest.html">REST request formats</a>)<br/><code>https://api.flickr.com/services/rest/?method=[METHOD]&api_key=[API-KEY]&tag=[TAG-NAME]format=json&jsoncallback=[JSONP-CALLBACK-NAME]</code>. Use the following API key: <code>286a91389f0175f572466c707ba85df9</code>.</li>
+                <li>Build the URL using the following format: (for details, see <a href="https://www.flickr.com/services/api/request.rest.html">REST request formats</a>)<br/><code>https://api.flickr.com/services/rest/?method=[METHOD]&api_key=[API-KEY]&tag=[TAG-NAME]&format=json&jsoncallback=[JSONP-CALLBACK-NAME]</code>. Use the following API key: <code>286a91389f0175f572466c707ba85df9</code>.</li>
                 <li>Implement the function <code>create_script_tag()</code>, which dynamically creates a <code>script</code> tag. Set the <code>src</code> attribute to the above URL.</li>
                 <li>Implement the callback function <code>jsonpcallback(...)</code>. Display the titles of the retrieved photos as <code>&lt;li&gt;</code> elements.</li>
             </ol>
