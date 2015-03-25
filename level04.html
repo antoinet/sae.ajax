@@ -44,9 +44,14 @@
 			
 
             
-          <h3><a id="exercise01" class="anchor" href="#exercise00" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 0 - Cross-Origin Request Blocked</h3>
+          <h3><a id="exercise01" class="anchor" href="#exercise01" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 1 - Cross-Origin Request Blocked</h3>
 		  <p>
-              
+              Download the file <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level04/exercise01.html">level04/exercise01.html</a> into your web server root and open the file through the browser. The page provides two buttons that will trigger AJAX requests to sites.
+              <ol>
+                <li>Requests from the first button fail. Figure out why. Have a look at the HTTP headers sent by the browser in the request. Is the HTTP header <code>Origin</code> set? Then have a look at the server response headers. Is the HTTP header <code>Access-Control-Allow-Origin</code> set?</li>
+                <li>Now look at the second button. The requests succeed. Where is the difference to the first example? In the request headers from the browser, or in the response headers from the server?</li>
+            </ol>
+        Tip: use Firebug to analyse the HTTP traffic.
 		  </p>
 			
             
