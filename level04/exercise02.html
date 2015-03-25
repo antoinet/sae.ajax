@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAE Ajax Course - Level 4 - Exercise 2</title>
+    <style type="text/css">
+      body { font-family: Arial, Helvetica, sans-serif; }
+    </style>
+
+    <script type="text/javascript">
+        
+        o = new Object();
+        o.firstName = "Peter";
+        o.lastName = "Muster";
+        o.age = 34;
+        o.address = new Object();
+        o.address.streetAddress = "Bahnhofstrasse 12";
+        o.address.city = "Entenhausen";
+        o.address.state = "BS";
+        o.address.postalCode = "1234";
+        o.phoneNumber = new Array();
+        o.phoneNumber.push(new Object());
+        o.phoneNumber[0].type = "home";
+        o.phoneNumber[0].number = "+4112345678";
+        
+        // Step 1: write a function to display object "o" in the form below
+        function jsoncallback(jsondata) {
+                // YOUR CODE HERE    
+        }
+        
+        // Step 2: write a function that creates a script tag with src attribute
+        // set to exercise02.php. Append the tag to the body. Call this function
+        // in the onclick event handler instead of the other one.
+        function jsonp() {
+                // YOUR CODE HERE
+        }
+    </script>
+
+  </head>
+  <body>
+    <input type="button" onclick="jsonCallback(o)" value="Display data"><br/>
+    <table>
+        <tr><td>First name</td><td><input type="text" id="firstName"/></td></tr>
+        <tr><td>Last name</td><td><input id="lastName"/></td></tr>
+        <tr><td>Age</td><td><input id="age"/></td></tr>
+        <tr><td>Street address</td><td><input id="streetAddress"/></td></tr>
+        <tr><td>State</td><td><input id="state"/></td></tr>
+        <tr><td>Postal code</td><td><input id="postalCode"/></td></tr>
+    </table>
+  </body>
+</html>
