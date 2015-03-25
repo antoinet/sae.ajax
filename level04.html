@@ -55,7 +55,7 @@
 		  </p>
 
     
-          <h3><a id="exercise01" class="anchor" href="#exercise02" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 2 - JSONP</h3>
+          <h3><a id="exercise02" class="anchor" href="#exercise02" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 2 - JSONP</h3>
 		  <p>The goal of this exercise is to bypass the Same Origin Policy by dynamically creating a <code>&lt;script&gt;</code> using DOM. The URL given in the <code>src</code> attribute will be requested by the browser as soon as the DOM node is appended to the document. We can (ab-)use this to load a javascript file containing padded JSON data (so called JSONP). Therefore, it is necessary to declare a corresponding callback function in the HTML file.
               Download <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level04/exercise02.html">level04/exercise02.html</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level04/exercise02.php">level04/exercise02.php</a> into your web server root.
             <ol>
@@ -64,6 +64,18 @@
             </ol>
     
     Hint: use the DOM functions <code>document.getElementById(...)</code>, <code>document.createElement(...)</code> and <code>document.appendChild(...)</code>.
+		  </p>
+
+          <h3><a id="exercise03" class="anchor" href="#exercise03" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 3 - JSONP Call to Flickr</h3>
+		  <p>In this exercise, you will provide code to call the Flickr API with a JSONP call to retrieve photos that were tagged with <code>zurich</code>.
+              
+            <ol>
+                <li>Have a look at the API specification for the corresponding method <a href="https://www.flickr.com/services/api/flickr.tags.getClusterPhotos.html">flickr.tags.getClusterPhotos</a>. Also, play around with the <a href="https://www.flickr.com/services/api/explore/flickr.tags.getClusterPhotos">API Explorer</a> to see how the response data is formatted (choose output: JSONP).</li>
+                <li>Build the URL using the following format: (for details, see <a href="https://www.flickr.com/services/api/request.rest.html">REST request formats</a>)<br/><code>https://api.flickr.com/services/rest/?method=[METHOD]&api_key=[API-KEY]&tag=[TAG-NAME]format=json&jsoncallback=[JSONP-CALLBACK-NAME]</code>. Use the following API key: <code>286a91389f0175f572466c707ba85df9</code>.</li>
+                <li>Implement the function <code>create_script_tag()</code>, which dynamically creates a <code>script</code> tag. Set the <code>src</code> attribute to the above URL.</li>
+                <li>Implement the callback function <code>jsonpcallback(...)</code>. Display the titles of the retrieved photos as <code>&lt;li&gt;</code> elements.</li>
+            </ol>
+            Hint: test the URL in your browser before coding.
 		  </p>
 			
             
