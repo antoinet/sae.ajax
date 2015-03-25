@@ -53,6 +53,18 @@
             </ol>
         Tip: use Firebug to analyse the HTTP traffic.
 		  </p>
+
+    
+          <h3><a id="exercise01" class="anchor" href="#exercise02" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 2 - JSONP</h3>
+		  <p>The goal of this exercise is to bypass the Same Origin Policy by dynamically creating a <code>&lt;script&gt;</code> using DOM. The URL given in the <code>src</code> attribute will be requested by the browser as soon as the DOM node is appended to the document. We can (ab-)use this to load a javascript file containing padded JSON data (so called JSONP). Therefore, it is necessary to declare a corresponding callback function in the HTML file.
+              Download <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level04/exercise02.html">level04/exercise02.html</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level04/exercise02.php">level04/exercise02.php</a> into your web server root.
+            <ol>
+                <li>Implement the function <code>jsoncallback()</code>. Your code should extract the data values of the predefined object <code>o</code> and display them into the corresponding form fields in the HTML body.</li>
+                <li>Implement the second function <code>jsonp()</code>. In there, you should dynamically create a <code>script</code> tag, set its <code>src</code> attribute to the php file (exercise02.php) and append the node to the body of the HTML file.</li>
+            </ol>
+    
+    Hint: use the DOM functions <code>document.getElementById(...)</code>, <code>document.createElement(...)</code> and <code>document.appendChild(...)</code>.
+		  </p>
 			
             
         </section>
