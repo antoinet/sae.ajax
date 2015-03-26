@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AE Ajax Course - Level 5 - Exercise 1</title>
+		<script type="text/javascript">
+		function autosuggest() {
+			var datalist = document.getElementById('countries');
+			
+			// 1. check if query is not empty
+			var query = document.getElementById('query');
+			if (!query.value) {
+				datalist.innerHTML = '';
+				return;
+			}
+
+			// 2. make AJAX call to autosuggest.php?query=...
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					// 3. empty the datalist
+					datalist.innerHTML = '';
+				
+					// 4. parse suggestions from JSON response
+					var data = JSON.parse(xhr.responseText);
+				
+					// 5. add results to datalist
+					for (var i = 0; i < data.length; i++) {
+						var option = document.createElement('option');
+						var value = document.createAttribute('value');
+						value.nodeValue = data[i];
+						option.setAttributeNode(value);
+						datalist.appendChild(option);
+					}
+				}
+			};
+			xhr.open('GET', 'exercise01.php?query=' + query.value);
+			xhr.send();
+		}
+		</script>
+	</head>
+	<body>
+        
+		<input type="text" id="query" placeholder="Search..." list="countries" autocomplete="off" oninput="autosuggest()" autofocus/>
+        
+		<datalist id="countries"></datalist>
+	</body>
+</html>
