@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SAE Ajax Course - Level 5 - Exercise 0</title>
+    <style type="text/css">
+      body { font-family: Arial, Helvetica, sans-serif; }
+      .error { font-weight: bold; color: red; }
+    </style>
+    
+    <!-- import jquery from a CDN (optional) -->
+    <!--script src="http://code.jquery.com/jquery-1.11.2.min.js"></script-->
+
+    <script type="text/javascript">
+        
+        function ajax_validate_form() {
+            // YOUR CODE HERE
+            
+            return false;
+        }
+        
+    </script>
+
+  </head>
+  <body>
+    <form action="exercise00.php" method="POST" onsubmit="return ajax_validate_form()">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" name="name"/></td>
+                <td class="error"></td>
+            </tr>
+            <tr>
+                <td>E-Mail</td>
+                <td><input type="text" name="email"/></td>
+                <td class="error"></td>
+            </tr>
+            <tr>
+                <td>Comment</td>
+                <td><textarea name="comment"></textarea></td>
+                <td class="error"></td>
+            </tr>
+            <tr>
+                <td>Website</td>
+                <td><input type="text" name="website"/></td>
+                <td class="error"></td>
+            </tr>
+        </table>
+        <input type="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
