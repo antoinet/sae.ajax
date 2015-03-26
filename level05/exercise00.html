@@ -24,30 +24,30 @@
 
   </head>
   <body>
-    <form action="exercise00.php" method="POST" onsubmit="return ajax_validate_form()">
+    <form>
         <table>
             <tr>
                 <td>Name</td>
-                <td><input type="text" name="name"/></td>
-                <td class="error"></td>
+                <td><input type="text" id="name" name="name"/></td>
+                <td class="error" id="error_name"></td>
             </tr>
             <tr>
                 <td>E-Mail</td>
-                <td><input type="text" name="email"/></td>
-                <td class="error"></td>
+                <td><input type="text" id="email" name="email"/></td>
+                <td class="error" id="error_email"></td>
             </tr>
             <tr>
                 <td>Comment</td>
-                <td><textarea name="comment"></textarea></td>
-                <td class="error"></td>
+                <td><textarea id="comment" name="comment"></textarea></td>
+                <td class="error" id="error_comment"></td>
             </tr>
             <tr>
                 <td>Website</td>
-                <td><input type="text" name="website"/></td>
-                <td class="error"></td>
+                <td><input type="text" id="website" name="website"/></td>
+                <td class="error" id="error_website"></td>
             </tr>
         </table>
-        <input type="submit" value="Submit"/>
+        <input type="button" value="Submit" onclick="ajax_validate_form()"/>
     </form>
   </body>
 </html>
