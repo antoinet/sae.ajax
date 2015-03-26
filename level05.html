@@ -13,14 +13,14 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>SAE Ajax Course</title>
+    <title>SAE Ajax Course - Level 5</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
         <h1>SAE Ajax</h1>
-        <h2>Welcome</h2>
+        <h2>Level 5 - Apply your AJAX Knowledge</h2>
         <a href="https://github.com/antoinet/sae.ajax" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
@@ -28,29 +28,15 @@
     <div id="content-wrapper">
       <div class="inner clearfix">
         <section id="main-content">
-          <h3><a id="welcome-to-sae-ajax-course" class="anchor" href="#welcome-to-sae-ajax-course" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the SAE Ajax Course.</h3>
+			
 
+          <h3><a id="exercise00" class="anchor" href="#exercise00" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercise 0 - AJAX Form Validation</h3>
+		  <p>
+			 In this exercise, you will implement an HTML form validation using AJAX. The backend already has all the validation logic. Your task is to call the PHP file, check if there are validation errors, and if so, display the corresponding validation messages in the form beside the corresponding field. Download <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level05/exercise00.html">level05/exercise00.html</a> and <a href="https://raw.githubusercontent.com/antoinet/sae.ajax/master/level05/exercise00.php">level05/exercise00.php</a> into your web server root.
+		  </p>
 
-<pre><code>xhr = new XMLHttpRequest();
-xhr.onreadystatechange = function() {
-	if (xhr.readyState == 4 &amp;&amp; xhr.status == 200) {
-		alert("AJAX!");
-	}
-}
-xhr.open("GET", "/ajax.php");
-xhr.send();</code></pre>
-
-
-          <h3><a id="exercises" class="anchor" href="#exercises" aria-hidden="true"><span class="octicon octicon-link"></span></a>Exercises</h3>
-Download all exercises using the button on the right.
-<ul>
-	<li><a href="level01.html">Level 1 - Warm Up</a></li>
-    <li><a href="level02.html">Level 2 - Working with DOM</a></li>
-    <li><a href="level03.html">Level 3 - The XMLHttpRequest Object</a></li>
-    <li><a href="level04.html">Level 4 - Same Origin Policy</a></li>
-    <li><a href="level04.html">Level 5 - Apply your AJAX Knowledge</a></li>
-</ul>
-
+          
+      
         </section>
 
         <aside id="sidebar">
